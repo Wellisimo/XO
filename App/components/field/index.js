@@ -19,7 +19,7 @@ const Fields = () => {
 
   // check for game result with delay to allow player or computer move animation to play till end
   useEffect(() => {
-    const timeout_3 = setTimeout(() => {
+    const timeout_1 = setTimeout(() => {
       setEndGame(result(squares));
     }, 600);
 
@@ -27,7 +27,7 @@ const Fields = () => {
       setMessage(result(squares));
     }, 1000);
     return () => {
-      clearTimeout(timeout_3);
+      clearTimeout(timeout_1);
       clearTimeout(timeout_2);
     };
   }, [squares]);
